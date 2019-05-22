@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="jumbotron">
+
+    <h1 class="display-4"><img src="https://img.icons8.com/cotton/52/000000/audio-wave.png">Audio Classifier</h1>
+    <p class="lead">This application reads an audio file and proceses it through our audio-classification model to
+      return the most accurate label.</p>
+    <hr class="my-2">
+
+    <p>
+      <h4>Follow the steps below:</h4>
+    </p>
+    <p class="lead">
+
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <img width="30" height="30"
+          src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OTYuMTU4IDQ5Ni4xNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5Ni4xNTggNDk2LjE1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiM1NkI0OEM7IiBkPSJNMjQ4LjA4MiwwLjAwM0MxMTEuMDcsMC4wMDMsMCwxMTEuMDYxLDAsMjQ4LjA4NWMwLDEzNywxMTEuMDcsMjQ4LjA3LDI0OC4wODIsMjQ4LjA3ICBjMTM3LjAwNiwwLDI0OC4wNzYtMTExLjA3LDI0OC4wNzYtMjQ4LjA3QzQ5Ni4xNTgsMTExLjA2MSwzODUuMDg4LDAuMDAzLDI0OC4wODIsMC4wMDN6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMjc4Ljc2NywxNDUuNDE5Yy0zLjEyNi00LjAwMy03LjI3Ni02LjAwNi0xMi40NTEtNi4wMDZjLTQuNTkxLDAtNy43MTYsMC44NzktOS4zNzUsMi42MzcgIGMtMS42NjIsMS43NTgtNS4yMjYsNi40NDUtMTAuNjkzLDE0LjA2M2MtNS40Nyw3LjYxNy0xMS43NDQsMTQuNTAyLTE4LjgyMywyMC42NTRjLTcuMDgyLDYuMTUyLTE2LjUzLDEyLjAxMi0yOC4zNDUsMTcuNTc4ICBjLTcuOTEsMy43MTItMTMuNDI5LDYuNzM4LTE2LjU1Myw5LjA4MmMtMy4xMjYsMi4zNDQtNC42ODgsNi4wMDYtNC42ODgsMTAuOTg2YzAsNC4yOTgsMS41ODYsOC4wODIsNC43NjEsMTEuMzUzICBjMy4xNzIsMy4yNzMsNi44MTIsNC45MDcsMTAuOTEzLDQuOTA3YzguNTkyLDAsMjUuMjkyLTkuNTIxLDUwLjA5OC0yOC41NjRWMzM1LjQxYzAsNy44MTQsMS44MDYsMTMuNzIyLDUuNDIsMTcuNzI1ICBjMy42MTIsNC4wMDMsOC4zOTcsNi4wMDYsMTQuMzU1LDYuMDA2YzEzLjM3OCwwLDIwLjA2OC05LjgxNCwyMC4wNjgtMjkuNDQzVjE2MS45NzIgIEMyODMuNDU1LDE1NC45NDEsMjgxLjg5MiwxNDkuNDI1LDI3OC43NjcsMTQ1LjQxOXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+        Select wav file
+        <input type="file" name="myWav" id="input">
+
+        <br>
+        <div>
+          <img width="30" height="30"
+            src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OTYuMTU4IDQ5Ni4xNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5Ni4xNTggNDk2LjE1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiM1NkI0OEM7IiBkPSJNMjQ4LjA4MiwwLjAwM0MxMTEuMDcsMC4wMDMsMCwxMTEuMDYxLDAsMjQ4LjA4NWMwLDEzNywxMTEuMDcsMjQ4LjA3LDI0OC4wODIsMjQ4LjA3ICBjMTM3LjAwNiwwLDI0OC4wNzYtMTExLjA3LDI0OC4wNzYtMjQ4LjA3QzQ5Ni4xNTgsMTExLjA2MSwzODUuMDg4LDAuMDAzLDI0OC4wODIsMC4wMDN6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMzE5Ljc4MywzMjUuNTk1Yy00LjAwNS0zLjEyNC05LjgxNC00LjY4OC0xNy40MzItNC42ODhoLTc2LjQ2NWMyLjQ0LTMuNzEsNC44MzQtNi44ODUsNy4xNzgtOS41MjEgIGM1LjQ2OC02LjY0LDE1LjU1LTE1Ljk2NywzMC4yNDktMjcuOTc5YzE0LjY5Ni0xMi4wMTIsMjUuMTctMjAuODI0LDMxLjQyMS0yNi40NGM2LjI0OS01LjYxNCwxMi4zNzgtMTMuMzc4LDE4LjM4NC0yMy4yOTEgIGM2LjAwNi05LjkxMSw5LjAwOS0yMC45MjIsOS4wMDktMzMuMDMyYzAtNy43MTMtMS40NDItMTUuMTYxLTQuMzIxLTIyLjMzOWMtMi44ODItNy4xNzgtNi45MS0xMy41LTEyLjA4NS0xOC45NyAgYy01LjE3Ny01LjQ2OC0xMS4xODMtOS43NjQtMTguMDE4LTEyLjg5MWMtMTAuNTQ3LTQuNjg4LTIzLjI5MS03LjAzMS0zOC4yMzItNy4wMzFjLTEyLjQwMywwLTIzLjIxOCwxLjgzMS0zMi40NDYsNS40OTMgIHMtMTYuODQ2LDguNDczLTIyLjg1MiwxNC40MjljLTYuMDA2LDUuOTU4LTEwLjUyNCwxMi41OTgtMTMuNTUsMTkuOTIyYy0zLjAyOCw3LjMyNC00LjU0MSwxNC4zNTUtNC41NDEsMjEuMDk0ICBjMCw1LjU2NiwxLjYxMSw5Ljk2MSw0LjgzNCwxMy4xODRzNy4yNzQsNC44MzQsMTIuMTU4LDQuODM0YzUuNTY2LDAsOS43ODktMS43NTgsMTIuNjcxLTUuMjczICBjMi44NzktMy41MTYsNS40NjgtOC41NDQsNy43NjQtMTUuMDg4YzIuMjkzLTYuNTQyLDMuOTMtMTAuNTQ3LDQuOTA3LTEyLjAxMmM3LjMyNC0xMS4yMjksMTcuMzgxLTE2Ljg0NiwzMC4xNzYtMTYuODQ2ICBjNi4wNTQsMCwxMS42NDYsMS4zNjksMTYuNzcyLDQuMTAyYzUuMTI3LDIuNzM1LDkuMTc4LDYuNTY5LDEyLjE1OCwxMS40OTljMi45NzgsNC45MzMsNC40NjgsMTAuNTI0LDQuNDY4LDE2Ljc3MiAgYzAsNS43NjMtMS4zOTIsMTEuNjQ2LTQuMTc1LDE3LjY1MXMtNi44MzcsMTEuODY1LTEyLjE1OCwxNy41NzhjLTUuMzI0LDUuNzEzLTExLjk4OSwxMS40MDMtMTkuOTk1LDE3LjA2NSAgYy00LjQ5MywzLjAyOC0xMS45NjQsOS4zNTItMjIuNDEyLDE4Ljk3Yy0xMC40NTEsOS42Mi0yMi4xNjksMjEuMTY3LTM1LjE1NiwzNC42NDRjLTMuMTI2LDMuMzIxLTYuMDA2LDcuODg3LTguNjQzLDEzLjY5NiAgYy0yLjYzNyw1LjgxMi0zLjk1NSwxMC40NzQtMy45NTUsMTMuOTg5YzAsNS40NywyLjA1MSwxMC4yMzEsNi4xNTIsMTQuMjgyYzQuMTAyLDQuMDU0LDkuODE0LDYuMDc5LDE3LjEzOSw2LjA3OUgzMDYuNiAgYzYuNDQ1LDAsMTEuMjU0LTEuNjU5LDE0LjQyOS00Ljk4YzMuMTcyLTMuMzE5LDQuNzYxLTcuMzcyLDQuNzYxLTEyLjE1OEMzMjUuNzg5LDMzMi45NywzMjMuNzg2LDMyOC43MjIsMzE5Ljc4MywzMjUuNTk1eiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+          Play audio file
+          <audio id="sound" controls></audio>
+        </div>
+
+        <br>
+        <div>
+          <img width="30" height="30"
+            src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OTYuMTU4IDQ5Ni4xNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5Ni4xNTggNDk2LjE1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiM1NkI0OEM7IiBkPSJNMjQ4LjA4MiwwLjAwM0MxMTEuMDcsMC4wMDMsMCwxMTEuMDYxLDAsMjQ4LjA4NWMwLDEzNywxMTEuMDcsMjQ4LjA3LDI0OC4wODIsMjQ4LjA3ICBjMTM3LjAwNiwwLDI0OC4wNzYtMTExLjA3LDI0OC4wNzYtMjQ4LjA3QzQ5Ni4xNTgsMTExLjA2MSwzODUuMDg4LDAuMDAzLDI0OC4wODIsMC4wMDN6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMzE5LjYzNywyNjkuNzExYy0yLjYzNy02LjM5NS02LjU2OS0xMi4yMzEtMTEuNzkyLTE3LjUwNWMtNS4yMjYtNS4yNzMtMTEuNjQ2LTkuOTYxLTE5LjI2My0xNC4wNjMgIGM3LjkxLTYuNjQsMTMuOTg5LTEzLjQ1MSwxOC4yMzctMjAuNDM1YzQuMjQ4LTYuOTgxLDYuMzcyLTE1LjM1NSw2LjM3Mi0yNS4xMjJjMC03LjQyLTEuNDY1LTE0LjM1NS00LjM5NS0yMC44MDEgIHMtNy4yNzYtMTIuMTA4LTEzLjAzNy0xNi45OTJjLTUuNzYzLTQuODgyLTEyLjU1LTguNjE3LTIwLjM2MS0xMS4yMDZjLTcuODE0LTIuNTg2LTE2LjQ1Ny0zLjg4Mi0yNS45MjgtMy44ODIgIGMtMTAuODQsMC0yMC42NTQsMS41MzgtMjkuNDQzLDQuNjE0cy0xNi4xMzksNy4xNTUtMjIuMDQ2LDEyLjIzMWMtNS45MSw1LjA3OS0xMC40LDEwLjQyNi0xMy40NzcsMTYuMDQgIGMtMy4wNzYsNS42MTctNC42MTQsMTAuOTYzLTQuNjE0LDE2LjA0YzAsNS4yNzMsMS42MzQsOS40OTksNC45MDcsMTIuNjcxYzMuMjcxLDMuMTc1LDYuODU5LDQuNzYxLDEwLjc2Nyw0Ljc2MSAgYzMuMzE5LDAsNi4yNDktMC41ODYsOC43ODktMS43NThjMi41MzgtMS4xNzIsNC4yOTYtMi43ODMsNS4yNzMtNC44MzRjMS42NTktMy44MDksMy40OS03Ljg2LDUuNDkzLTEyLjE1OCAgYzItNC4yOTYsNC4xMjUtNy44MTIsNi4zNzItMTAuNTQ3YzIuMjQ1LTIuNzMzLDUuMjk2LTQuOTMsOS4xNTUtNi41OTJjMy44NTYtMS42NTksOC43NjQtMi40OSwxNC43MjItMi40OSAgYzguNzg5LDAsMTUuNzcsMi43MSwyMC45NDcsOC4xM2M1LjE3NSw1LjQyLDcuNzY0LDExLjg5MSw3Ljc2NCwxOS40MDljMCw5Ljg2NS0zLjI0OCwxNy40MzItOS43NDEsMjIuNzA1ICBjLTYuNDk2LDUuMjczLTE0LjIzNCw3LjkxLTIzLjIxOCw3LjkxaC02LjAwNmMtNi45MzUsMC0xMi4xNTgsMS40NDItMTUuNjc0LDQuMzIxYy0zLjUxNiwyLjg4Mi01LjI3Myw2LjY2NS01LjI3MywxMS4zNTMgIGMwLDQuNzg2LDEuNDY1LDguNTIxLDQuMzk1LDExLjIwNmMyLjkzLDIuNjg3LDcuMDc5LDQuMDI4LDEyLjQ1MSw0LjAyOGMxLjE3MiwwLDMuODA5LTAuMTk0LDcuOTEtMC41ODYgIGM0LjEwMi0wLjM4OSw3LjEyNy0wLjU4Niw5LjA4Mi0wLjU4NmMxMS4xMzMsMCwxOS44MjMsMy4yNDgsMjYuMDc0LDkuNzQxYzYuMjQ5LDYuNDk2LDkuMzc1LDE1LjQ1NCw5LjM3NSwyNi44OCAgYzAsNy43MTYtMS44MzEsMTQuNTAyLTUuNDkzLDIwLjM2MXMtOC4zMDIsMTAuMjc5LTEzLjkxNiwxMy4yNTdjLTUuNjE3LDIuOTgtMTEuNDUxLDQuNDY4LTE3LjUwNSw0LjQ2OCAgYy0xMC41NDcsMC0xOC43MjctMy4yOTYtMjQuNTM2LTkuODg4Yy01LjgxMi02LjU5Mi0xMS4yNTYtMTYuNjc0LTE2LjMzMy0zMC4yNDljLTAuNzgzLTIuMjQ1LTIuNDQyLTQuMTc1LTQuOTgtNS43ODYgIGMtMi41NDEtMS42MTEtNS4xNzctMi40MTctNy45MS0yLjQxN2MtNS40NywwLTEwLjAzNCwxLjczNS0xMy42OTYsNS4yYy0zLjY2MiwzLjQ2OC01LjQ5Myw4LjAzNC01LjQ5MywxMy42OTYgIGMwLDQuMzk1LDEuNTM4LDkuOTYxLDQuNjE0LDE2LjY5OXM3LjYxNywxMy4yNTcsMTMuNjIzLDE5LjU1NnMxMy42NDYsMTEuNTQ5LDIyLjkyNSwxNS43NDdjOS4yNzYsNC4xOTgsMTkuNzc1LDYuMjk5LDMxLjQ5NCw2LjI5OSAgYzExLjUyMiwwLDIyLjA0Ni0xLjgzMSwzMS41NjctNS40OTNzMTcuNzQ4LTguNzM5LDI0LjY4My0xNS4yMzRjNi45MzMtNi40OTMsMTIuMTgxLTEzLjg5MSwxNS43NDctMjIuMTkyICBjMy41NjMtOC4yOTksNS4zNDctMTYuODk0LDUuMzQ3LTI1Ljc4MUMzMjMuNTkyLDI4My4wMTgsMzIyLjI3MywyNzYuMTA5LDMxOS42MzcsMjY5LjcxMXoiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+
+          <input type="submit" value="Label" name="submit">
+        </div>
+
+        <br>
+        <div>
+          <img width="30" height="30"
+            src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0OTYuMTU4IDQ5Ni4xNTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5Ni4xNTggNDk2LjE1ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIHN0eWxlPSJmaWxsOiM1NkI0OEM7IiBkPSJNMjQ4LjA4MiwwLjAwM0MxMTEuMDcsMC4wMDMsMCwxMTEuMDYxLDAsMjQ4LjA4NWMwLDEzNywxMTEuMDcsMjQ4LjA3LDI0OC4wODIsMjQ4LjA3ICBjMTM3LjAwNiwwLDI0OC4wNzYtMTExLjA3LDI0OC4wNzYtMjQ4LjA3QzQ5Ni4xNTgsMTExLjA2MSwzODUuMDg4LDAuMDAzLDI0OC4wODIsMC4wMDN6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMzI0Ljk4MywyNzkuODkyYy00LjU0MS0yLjA1MS0xMC41NzItMy4wNzYtMTguMDkxLTMuMDc2aC02LjI5OVYxNjMuNDM3ICBjMC0xNi45OTItNy40MjMtMjUuNDg4LTIyLjI2Ni0yNS40ODhjLTQuNTkxLDAtOC41MjEsMS41MzgtMTEuNzkyLDQuNjE0Yy0zLjI3MywzLjA3Ni03LjQ0OCw4LjAzNC0xMi41MjQsMTQuODY4bC03Ny42MzcsMTAzLjg1NyAgYy0yLjE0OSwyLjgzMy0zLjk1NSw1LjIyNi01LjQyLDcuMTc4Yy0xLjQ2NSwxLjk1NS0yLjg4MiwzLjk4LTQuMjQ4LDYuMDc5Yy0xLjM2OSwyLjEwMS0yLjM5NCw0LjEwMi0zLjA3Niw2LjAwNiAgYy0wLjY4NSwxLjkwNC0xLjAyNSwzLjc4Ni0xLjAyNSw1LjY0YzAsNy4yMjgsMi4zMTgsMTIuOTQxLDYuOTU4LDE3LjEzOWM0LjYzNyw0LjIsMTEuNTk1LDYuMjk5LDIwLjg3NCw2LjI5OWg3My41MzV2MjcuMjQ2ICBjMCw3LjMyNCwxLjY4NSwxMi44NjgsNS4wNTQsMTYuNjI2czcuNzg3LDUuNjQsMTMuMjU3LDUuNjRjNS41NjYsMCwxMC4wMDktMS44MzEsMTMuMzMtNS40OTNjMy4zMTktMy42NjIsNC45OC05LjI1MSw0Ljk4LTE2Ljc3MiAgVjMwOS42M2g4LjkzNmM3LjQyLDAsMTIuOTg3LTEuMjkzLDE2LjY5OS0zLjg4MmMzLjcxLTIuNTg2LDUuNTY2LTYuNzEzLDUuNTY2LTEyLjM3OCAgQzMzMS43OTUsMjg2LjQzNiwzMjkuNTI0LDI4MS45NDMsMzI0Ljk4MywyNzkuODkyeiBNMjYzLjk3MywyNzYuODE2aC02Mi45ODhsNjIuOTg4LTg1LjEwN1YyNzYuODE2eiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+
+
+          Result: {{post}}
+
+      </form>
+
+      <hr>
+
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+          aria-controls="collapseExample">
+          List of available categories
+        </a>
+
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+
+          <table class="table table-bordered table-hover table-condensed">
+            <thead>
+              <tr>
+                <th title="Label">Labels</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Saxophone</td>
+              </tr>
+              <tr>
+                <td>Glockenspiel</td>
+              </tr>
+              <tr>
+                <td>Cello</td>
+              </tr>
+              <tr>
+                <td>Knock</td>
+              </tr>
+              <tr>
+                <td>Gunshot or gunfire</td>
+              </tr>
+              <tr>
+                <td>Hi-hat</td>
+              </tr>
+              <tr>
+                <td>Laughter</td>
+              </tr>
+              <tr>
+                <td>Flute</td>
+              </tr>
+              <tr>
+                <td>Telephone</td>
+              </tr>
+              <tr>
+                <td>Bark</td>
+              </tr>
+              <tr>
+                <td>Scissors</td>
+              </tr>
+              <tr>
+                <td>Gong</td>
+              </tr>
+              <tr>
+                <td>Microwave oven</td>
+              </tr>
+              <tr>
+                <td>Shatter</td>
+              </tr>
+              <tr>
+                <td>Harmonica</td>
+              </tr>
+              <tr>
+                <td>Bass drum</td>
+              </tr>
+              <tr>
+                <td>Oboe</td>
+              </tr>
+              <tr>
+                <td>Bus</td>
+              </tr>
+              <tr>
+                <td>Tambourine</td>
+              </tr>
+              <tr>
+                <td>Keys jangling</td>
+              </tr>
+              <tr>
+                <td>Electric piano</td>
+              </tr>
+              <tr>
+                <td>Clarinet</td>
+              </tr>
+              <tr>
+                <td>Fireworks</td>
+              </tr>
+              <tr>
+                <td>Meow</td>
+              </tr>
+              <tr>
+                <td>Double bass</td>
+              </tr>
+              <tr>
+                <td>Cough</td>
+              </tr>
+              <tr>
+                <td>Acoustic guitar</td>
+              </tr>
+              <tr>
+                <td>Violin or fiddle</td>
+              </tr>
+              <tr>
+                <td>Snare drum</td>
+              </tr>
+              <tr>
+                <td>Squeak</td>
+              </tr>
+              <tr>
+                <td>Finger snapping</td>
+              </tr>
+              <tr>
+                <td>Writing</td>
+              </tr>
+              <tr>
+                <td>Trumpet</td>
+              </tr>
+              <tr>
+                <td>Drawer open or close</td>
+              </tr>
+              <tr>
+                <td>Cowbell</td>
+              </tr>
+              <tr>
+                <td>Tearing</td>
+              </tr>
+              <tr>
+                <td>Fart</td>
+              </tr>
+              <tr>
+                <td>Chime</td>
+              </tr>
+              <tr>
+                <td>Burping or eructation</td>
+              </tr>
+              <tr>
+                <td>Computer keyboard</td>
+              </tr>
+              <tr>
+                <td>Applause</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </p>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src='static/script.js'></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
